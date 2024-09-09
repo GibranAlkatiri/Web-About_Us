@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+    </script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <h1>City Gallery</h1>
+    <div class="burger-menu" onclick="toggleMenu()">
+        &#9776;</div>
+</header>
+
+
+<!-- Navigation Section -->
+<nav class="nav">
+    <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#city-info">City Information</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content Section -->
+<main class="main-content">
+    <section id="about">
+        <h1>About Us</h1>
+        <p>At City Gallery, our mission is to celebrate the vibrant and diverse cities around the world by providing a unique platform where users can explore and appreciate urban beauty. We are dedicated to showcasing not just the landmarks, but the soul of each city through high-quality images, engaging narratives, and interactive features.</p>
+        <p>Join us on this journey as we explore the world one city at a time, and let City Gallery be your source of inspiration and information for your next urban adventure.</p>
+    </section>
+
+      <section id="city-info">
+        <h1>City Information</h1>
+        <div class="slider">
+            <div class="card">
+                <h2>London</h2>
+                <p>London is the capital city of England and the most populous city in the United Kingdom. With a rich history, it has been a major settlement for two millennia.</p>
+                <a href="https://en.wikipedia.org/wiki/London" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="card">
+                <h2>New York</h2>
+                <p>New York City is known for its iconic landmarks like Times Square, Central Park, and the Statue of Liberty. It's a major cultural and financial hub in the United States.</p>
+                <a href="https://en.wikipedia.org/wiki/New_York_City" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="card">
+                <h2>Paris</h2>
+                <p>Paris, the capital of France, is renowned for its art, fashion, and landmarks such as the Eiffel Tower and the Louvre Museum. It’s often referred to as the "City of Light."</p>
+                <a href="https://en.wikipedia.org/wiki/Paris" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <h1>Features</h1>
+        <p>Our platform offers a variety of features designed to enhance your experience:</p>
+        <ul>
+            <li>High-quality images and videos of cities</li>
+            <li>Interactive maps for easy navigation</li>
+            <li>User-friendly interface</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+
+        <div class="contact-container">
+            <!-- Contact Form Section -->
+            <div class="contact-form">
+                <form action="https://eoj6n3u3sj2i6.m.pipedream.net" method="post">
+                    <div class="form-group">
+                        <label for="username">Name:</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="contact-info">
+                <p>For any inquiries or feedback, please contact us at:</p>
+                <p>Email: <a href="mailto:info@citygallery.com">info@citygallery.com</a></p>
+                <p>Phone: +1 123 456 7890</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; Praktikum Sistem Multimedia</p>
+</footer>
+
+<!-- External CSS Styles -->
+<style>
+body {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Warna latar belakang header */
+    padding: 10px 10px;
+    z-index: 1000; /* Pastikan header berada di atas elemen lainnya */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opsional: Berikan shadow untuk efek */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header h1::after {
+    content: '';
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+    transform: scaleX(0);
+}
+
+.header h1:hover::after {
+    transform: scaleX(0.8);
+}
+</style>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* Nav Styles */
+.nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav ul a {
+    text-decoration: none;
+}
+
+.nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+/* Nav hover */
+.nav ul li a:hover {
+    color: #007BFF;
+    background-color: #e9ecef;
+    border-radius: 5px; 
+}
+
+/* Main */
+.main-content {
+    margin-left: 170px;
+    margin-top: 80px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+/* Additional Styles for Layout */
+.main-content section {
+    border-bottom: 2px solid gray;
+    padding-bottom: 20px;
+    margin-bottom: 20px; /* Add space between sections */
+}
+
+/* Font Styles */
+h1 {
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+}
+
+p {
+    color: #555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Container card */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style card */
+.card {
+    background: rgba(255, 255, 255, 0.6); /* Transparan putih */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+/* Learn More */
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #007BFF;
+    text-decoration: none;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contact-form, .contact-info {
+    width: 48%;
+    margin: 0 20px;
+}
+
+.contact-form {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.contact-info {
+    padding: 10px;
+    border-left: 2px solid gray;
+    margin-left: 40px;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.burger-menu {
+    display: none;
+}
+
+    /* Responsive */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        border-left: 0;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .contact-form, .contact-info {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact-info {
+        border-left: none;
+        margin: 20px;
+        padding-top: 20px;
+    }
+
+    .burger-menu {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        z-index: 1000;
+        transition: all 0.3s ease; /* Menambahkan transisi */
+    }
+
+    .burger-menu:hover {
+        color: #007BFF; /* Warna berubah saat hover */
+        transform: scale(1.1); /* Efek pembesaran sedikit */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        position: fixed;
+        top: 60px; /* Turunkan di bawah header */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%); /* Tersembunyi di awal */
+        transition: transform 0.3s ease; /* Animasi transisi */
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+        top: 52px;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateY(0); /* Muncul ke layar */
+        backdrop-filter: blur(10px);
+    }
+}
+
